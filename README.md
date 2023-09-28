@@ -78,5 +78,4 @@ GitHub: pfashizzle
 
 Email: oscar.akerberg@live.se
 
-Feel free to reach out if you have any questions or feedback.
 *************************************************************************************
