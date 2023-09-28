@@ -1,9 +1,9 @@
 {
-"sensor_id": "DS18B20",          #Sensor ID for DS18B20 temperature sensor
-"sensor_pin": 16,                #GPIO pin where the sensor is connected
-"uart_port": 0,                  #UART port number
-"uart_tx": 0,                    #UART transmit pin
-"uart_rx": 1,                    #UART receive pin
-"baud_rate": 9600,               #Baud rate for UART communication
-"measurement_interval": 900      #Measurement interval in seconds
+"sensor_id": "DS18B20",          # Sensor ID for DS18B20 temperature sensor
+"sensor_pin": 16,                # GPIO pin where the sensor is connected
+"uart_port": 0,                  # UART port number
+"uart_tx": 0,                    # UART transmit pin
+"uart_rx": 1,                    # UART receive pin
+"baud_rate": 9600,               # Baud rate for UART communication
+"measurement_interval": 900      # Measurement interval in seconds
 }
