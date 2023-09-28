@@ -1,0 +1,9 @@
+{
+    "sensor_id": "DS18B20",
+    "sensor_pin": 16,
+    "uart_port": 0,
+    "uart_tx": 0,
+    "uart_rx": 1,
+    "baud_rate": 9600,
+    "measurement_interval": 900
+}
