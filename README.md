@@ -30,9 +30,9 @@ Before using this code project, ensure you have the following prerequisites:
 ### Hardware Setup
 
 1. Connect the DS18B20 temperature sensor(s) to your microcontroller as follows:
-   - Data Pin (DS18B20) -> GPIO Pin (Microcontroller)
-   - VCC (DS18B20) -> 3.3V (Microcontroller)
-   - GND (DS18B20) -> GND (Microcontroller)
+   - Data Pin (DS18B20/DS18X20) -> GPIO Pin (Microcontroller)
+   - VCC (DS18B20/DS18X20) -> 3.3V (Microcontroller)
+   - GND (DS18B20/DS18X20) -> GND (Microcontroller)
 
 2. Ensure the connections are secure.
 
@@ -50,8 +50,8 @@ The code uses a configuration file named `config.json` to set up parameters. Cre
 
 json:
 {
-    "pin": 4,               // GPIO pin to which the DS18B20 sensor(s) are connected
-    "measurement_interval": 3000   // Measurement interval in milliseconds
+    "pin": 16,               // GPIO pin to which the DS18B20 sensor(s) are connected
+    "measurement_interval": 900   // Measurement interval in milliseconds
 }
 
 "pin": The GPIO pin to which the DS18B20/DS18X20 sensor(s) are connected.
