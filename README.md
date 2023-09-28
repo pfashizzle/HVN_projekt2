@@ -83,7 +83,11 @@ Feel free to adapt and extend the code to fit your specific use case.
 
 
 Author
+
 Oscar Åkerberg
+
 GitHub: pfashizzle
+
 Email: oscar.akerberg@live.se
+
 Feel free to reach out if you have any questions or feedback.
