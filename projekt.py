@@ -36,5 +36,5 @@ while True:
 
 
     # Vänta enligt mätningsintervallet
-    utime.sleep(config["measurement_interval"])
+    #utime.sleep(config["measurement_interval"])
 
