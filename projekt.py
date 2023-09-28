@@ -4,34 +4,40 @@ import ds18x20
 import ujson
 import utime
 
-print("Hello")
+print("I got your temp right here in my pocket.")
 # Read configuration file
 with open('config.json', 'r') as config_file:
     config = ujson.load(config_file)
 
+
 # Configure UART
 # uart = machine.UART(config["uart_port"], baudrate=config["baud_rate"])
 
-print(config["sensor_pin"])
+# Create a OneWire bus
+ds_bus = onewire.OneWire(machine.Pin(config["pin"]))
 
-# Create a OneWire bus and DS18X20 sensor
-ds_pin = machine.Pin(config["sensor_pin"])
-ds_bus = onewire.OneWire(ds_pin)
+# Create a DS18X20 sensor for the bus
 ds_sensor = ds18x20.DS18X20(ds_bus)
 
 while True:
-    # Start temperature measurement
-    ds_sensor.convert_temp()
+    # Scan for DS18B20 sensors on the bus
+    sensor_ids = ds_sensor.scan()
+    utime.sleep_ms(750)  # Adjust the sleep time based on your sensor's conversion time
+    for sensor_id in sensor_ids:
+        # Set the OneWire bus address to the current sensor's address
+        ds_bus.addr = sensor_id
 
-    # Wait for the measurement to complete
-    utime.sleep_ms(900)
+        # Start temperature measurement
+        ds_sensor.convert_temp()
 
-    # Read the temperature from the sensor
-    temperature = ds_sensor.read_temp(ds_sensor.scan()[0])
+        # Wait for the measurement to complete
+        #utime.sleep_ms(750)  # Adjust the sleep time based on your sensor's conversion time
 
-    # Send the temperature over UART
-    # uart.write("Sensor ID: {}\nTemperature: {:.2f}°C\n".format(config["sensor_id"], temperature))
-    print("Sensor ID: {}\nTemperature: {:.2f}°C\n".format(config["sensor_id"], temperature))
-
-    # Wait according to the measurement interval
-    # utime.sleep(config["measurement_interval"])
+        # Read the temperature from the sensor
+        temperature = ds_sensor.read_temp(sensor_id)
+        
+        # Convert the sensor_id bytearray to a readable hexadecimal string
+        sensor_id_str = ''.join(['{:02X}'.format(byte) for byte in sensor_id])
+        
+        # uart.write("Sensor ID: {}\nTemperature: {:.2f}°C\n".format(sensor_id_str, temperature))
+        print("Sensor ID: {} - Temperature: {:.2f}°C".format(sensor_id_str, temperature), end='  ')
