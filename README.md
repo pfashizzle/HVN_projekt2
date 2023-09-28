@@ -63,7 +63,7 @@ json:
 "measurement_interval": Measurement interval in milliseconds (e.g., 3000 milliseconds for every 3 seconds).
 
 Usage
-To start reading temperature data, upload the code to your ESP8266 or ESP32 microcontroller and ensure it's running. The code will scan for DS18B20 sensors on the OneWire bus, measure temperatures, and print the readings to the console.
+To start reading temperature data, upload the code to your microcontroller and ensure it's running. The code will scan for DS18B20/DS18X20 sensors on the OneWire bus, measure temperatures, and print the readings to the console.
 
 Customization
 You can customize this code project to suit your needs:
