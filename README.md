@@ -59,8 +59,8 @@ The code uses a configuration file named `config.json` to set up parameters. Cre
 
 "sensor_pin": The GPIO pin to which the DS18X20 sensor is connected.
 "sensor_id": A unique identifier for your sensor.
-"measurement_interval": Measurement interval in seconds (e.g., 300 seconds for every 5 minutes).
-Usage
+"measurement_interval": Measurement interval in seconds.
+
 To start logging temperature data, upload the code to your microcontroller and ensure it's running. The code will read temperature data from the DS18X20 sensor at the specified interval and print it to the console.
 
 Customization
@@ -71,8 +71,6 @@ Implement data storage, visualization, or alerts based on your requirements.
 Add additional sensors or sensors of different types.
 Feel free to adapt and extend the code to fit your specific use case.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 Author
 Oscar Åkerberg
