@@ -57,6 +57,7 @@ json:
 
 "pin": The GPIO pin to which the DS18B20/DS18X20 sensor(s) are connected.
 
+
 "measurement_interval": Measurement interval in milliseconds (e.g., 3000 milliseconds for every 3 seconds).
 
 Usage
