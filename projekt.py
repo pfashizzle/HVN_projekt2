@@ -4,14 +4,10 @@ import ds18x20
 import ujson
 import utime
 
-print("I got your temp right here in my pocket.")
+print("Hello")
 # Read configuration file
 with open('config.json', 'r') as config_file:
     config = ujson.load(config_file)
-
-
-# Configure UART
-# uart = machine.UART(config["uart_port"], baudrate=config["baud_rate"])
 
 # Create a OneWire bus
 ds_bus = onewire.OneWire(machine.Pin(config["pin"]))
@@ -31,13 +27,13 @@ while True:
         ds_sensor.convert_temp()
 
         # Wait for the measurement to complete
-        #utime.sleep_ms(750)  # Adjust the sleep time based on your sensor's conversion time
+        utime.sleep_ms(750)  # Adjust the sleep time based on your sensor's conversion time
 
         # Read the temperature from the sensor
         temperature = ds_sensor.read_temp(sensor_id)
-        
+
         # Convert the sensor_id bytearray to a readable hexadecimal string
         sensor_id_str = ''.join(['{:02X}'.format(byte) for byte in sensor_id])
-        
-        # uart.write("Sensor ID: {}\nTemperature: {:.2f}°C\n".format(sensor_id_str, temperature))
-        print("Sensor ID: {} - Temperature: {:.2f}°C".format(sensor_id_str, temperature), end='  ')
+
+        # Print the message in the specified format
+        print("{} {} {:.2f}".format(sensor_id_str, sensor_id_str, temperature))
