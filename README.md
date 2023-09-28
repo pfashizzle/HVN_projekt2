@@ -51,9 +51,9 @@ The code uses a configuration file named `config.json` to set up parameters. Cre
 json:
 {
    
-   "pin": 16,               // GPIO pin to which the DS18B20 sensor(s) are connected
+   "pin": 16,
    
-   "measurement_interval": 900   // Measurement interval in milliseconds
+   "measurement_interval": 900
    
 }
 
