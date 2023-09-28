@@ -32,6 +32,7 @@ Before using this code project, ensure you have the following:
    - Data Pin (DS18X20) -> GPIO Pin (Microcontroller)
    - VCC (DS18X20) -> 3.3V (Microcontroller)
    - GND (DS18X20) -> GND (Microcontroller)
+   - 4.7kOhm resistor between DS18X20 and VCC (microcontroller)
 
 2. Make sure the connections are secure.
 
