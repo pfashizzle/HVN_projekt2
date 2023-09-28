@@ -1,6 +1,6 @@
 # Temperature Sensor Data Logger
 
-This Python code project enables you to read temperature data from a DS18X20/DS18X20 temperature sensor and log it periodically using a MicroPython-compatible microcontroller. The temperature readings are printed to the console, and you can easily customize the code to send the data to other destinations.
+This Python code project enables you to read temperature data from a DS18X20/DS18X20 temperature sensor and log it periodically using a microcontroller. The temperature readings are printed to the console, and you can easily customize the code to send the data to other destinations.
 
 [![GitHub stars](https://img.shields.io/github/stars/pfashizzle/HVN_projekt2.svg)](https://github.com/pfashizzle/HVN_projekt2/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/pfashizzle/HVN_projekt2.svg)](https://github.com/pfashizzle/HVN_projekt2/issues)
