@@ -16,7 +16,6 @@ This MicroPython code project allows you to read temperature data from DS18B20 o
 - [Uploading the Code](#uploading-the-code)
 - [Configuration](#configuration)
 - [Usage](#usage)
-- [Customization](#customization)
 
 ## Prerequisites
 
