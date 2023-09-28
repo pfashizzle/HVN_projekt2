@@ -20,7 +20,7 @@ This Python code project enables you to read temperature data from a DS18X20 tem
 
 Before using this code project, ensure you have the following:
 
-1. A MicroPython-compatible microcontroller (e.g., ESP8266, ESP32).
+1. A MicroPython-compatible microcontroller.
 2. A DS18X20 temperature sensor.
 3. Proper wiring to connect the DS18X20 sensor to the microcontroller.
 
@@ -39,7 +39,7 @@ Before using this code project, ensure you have the following:
 
 1. Clone or download this code project to your local machine.
 
-2. Transfer the code files to your MicroPython-compatible microcontroller using tools like ampy or webREPL.
+2. Transfer the code files to your MicroPython-compatible microcontroller.
 
 3. Create a configuration file named `config.json` in the same directory as your code and configure it as explained in the [Configuration](#configuration) section below.
 
@@ -50,7 +50,7 @@ The code uses a configuration file named `config.json` to set up parameters. Cre
 {
     "sensor_pin": 12,              // GPIO pin to which the DS18X20 sensor is connected
     "sensor_id": "sensor_1",      // A unique identifier for your sensor
-    "measurement_interval": 300   // Measurement interval in seconds
+    "measurement_interval": 900   // Measurement interval in seconds
 }
 
 "sensor_pin": The GPIO pin to which the DS18X20 sensor is connected.
