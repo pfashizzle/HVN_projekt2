@@ -25,7 +25,7 @@ while True:
     ds_sensor.convert_temp()
 
     # Vänta på att mätningen ska bli klar
-    utime.sleep_ms(750)
+    utime.sleep_ms(900)
 
     # Läs temperaturen från sensorn
     temperature = ds_sensor.read_temp(ds_sensor.scan()[0])
